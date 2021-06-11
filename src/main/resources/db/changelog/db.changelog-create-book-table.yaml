@@ -1,0 +1,40 @@
+databaseChangeLog:
+    - changeSet:
+        id: create-book-table
+        author: chaitanyaubijawe@gmail.com
+        changes:
+            - createTable:
+                tableName: book
+                columns:
+                    - column:
+                        name: id
+                        type: BIGINT(20)
+                        autoIncrement: true
+                        constraints:
+                            primaryKey: true
+                    - column:
+                        name: name
+                        type: VARCHAR(64)
+                    - column:
+                        name: author
+                        type: VARCHAR(64)
+                    - column:
+                        name: description
+                        type: VARCHAR(64)
+                    - column:
+                        name: type
+                        type: VARCHAR(64)
+                    - column:
+                        name: ISBN
+                        type: VARCHAR(64)
+                    - column:
+                        name: price
+                        type: DECIMAL(10,3)
+
+
+            - sql:
+                  sql: INSERT INTO book(name,description,author,type,price,ISBN) VALUES('TestName1','TestDescr1', 'TestAuthor1', 'FICTION', '10', 'TestISBN');
+            - sql:
+                  sql: INSERT INTO book(name,description,author,type,price,ISBN) VALUES('TestName2','TestDescr1', 'TestAuthor2', 'FICTION', '10', 'TestISBN');
+            - sql:
+                  sql: INSERT INTO book(name,description,author,type,price,ISBN) VALUES('TestName2','TestDescr1', 'TestAuthor3', 'COMIC', '10', 'TestISBN');

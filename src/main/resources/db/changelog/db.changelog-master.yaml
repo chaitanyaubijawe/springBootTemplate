@@ -1,0 +1,10 @@
+# --------------------------------------------------------------------------------------------------------------------
+# master template for the liquibase database managment tool.  This is invoked every time that the app is started.
+# There are two corresponding tables in the actual database; the databasechangelog contains the corresponding entry
+# states and databasechangeloglock contains the sychronizer.  The databasechangelog tracks whether the update has been
+# applied or not and whether that change succeeded or failed.
+# ---------------------------------------------------------------------------------------------------------------------
+databaseChangeLog:
+    - include:
+        file: db/changelog/db.changelog-create-book-table.yaml
+
