@@ -16,18 +16,18 @@ Below dummy data is added
 
 ### How to build 
 For building application:
-* cd eShop
+* cd springBootTemplate
 * ./gradlew build
 
 ### How to run
 
 For running application:
-* cd eShop
+* cd springBootTemplate
 * ./gradlew bootRun
 
 ### How to run in container
 For running application within container:
-* cd eShop
+* cd springBootTemplate
 * ./gradlew build
 * docker build -t eshop:latest
 * docker run -p8080:8080 eshop:latest  
